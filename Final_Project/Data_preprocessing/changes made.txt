@@ -1,0 +1,10 @@
+changes made:
+
+--> original 'mypersonality_cleaned.csv' had 2 columns 'Unnamed: 26' and 'Unnamed: 25'. we deleted that and then removed all 'na' values
+
+--> for the following piece of code we filled all na values as 0:
+
+	features = ['cEXT', 'cNEU', 'cOPN', 'cAGR', 'cCON']
+	for feature in features:
+  	status_data[feature] = status_data[feature].map({'y': 1, 'n':0}).fillna(0).astype(int)
+
